@@ -2,19 +2,20 @@
 //  CollectionsTableViewController.swift
 //  ColorLoversApp
 //
-//  Created by Shaik Mathar Syed on 13/12/23.
-//
 
 import UIKit
 import CoreData
 
 class CollectionsTableViewController: UITableViewController {
 
-    var paletteHistory: [MagicGenViewController.Color] = []
+    var savedColors: [String] = []
+    var currentColor: [String] = []
+    var palettes: [[String]] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchPalettes()
+        correctData()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,14 +32,21 @@ class CollectionsTableViewController: UITableViewController {
         do {
             let palettes = try context.fetch(fetchRequest)
             for palette in palettes {
-                if let colors = palette.value(forKey: "palettes") as? [MagicGenViewController.Color] {
-                    paletteHistory.append(colors[0])
-                    print(paletteHistory)
+                if let colors = palette.value(forKey: "palettes") as? [String] {
+                    savedColors = colors
                 }
             }
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
+    }
+
+    func correctData() {
+        for i in 0..<savedColors.count/11 {
+            currentColor = Array(savedColors[(i*11)...((i*11)+10)])
+            palettes.append(currentColor)
+        }
+        print(palettes)
     }
 
     // MARK: - Table view data source
@@ -50,28 +58,30 @@ class CollectionsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return paletteHistory.count
+        return savedColors.count/11
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "collectionCell", for: indexPath) as! CollectionsTableViewCell
+        cell.colorLabel1.text = "#" + palettes[indexPath.row][0]
+        cell.colorLabel2.text = "#" + palettes[indexPath.row][2]
+        cell.colorLabel3.text = "#" + palettes[indexPath.row][4]
+        cell.colorLabel4.text = "#" + palettes[indexPath.row][6]
+        cell.colorLabel5.text = "#" + palettes[indexPath.row][8]
 
-        let color = paletteHistory[indexPath.row]
-        print(color)
+        cell.colorLabel1.backgroundColor = UIColor(hex: palettes[indexPath.row][0])
+        cell.colorLabel2.backgroundColor = UIColor(hex: palettes[indexPath.row][2])
+        cell.colorLabel3.backgroundColor = UIColor(hex: palettes[indexPath.row][4])
+        cell.colorLabel4.backgroundColor = UIColor(hex: palettes[indexPath.row][6])
+        cell.colorLabel5.backgroundColor = UIColor(hex: palettes[indexPath.row][8])
 
         // Configure the cell...
-        cell.colorLabel1.text = "#" + color.color1Hex
-        cell.colorLabel1.backgroundColor = UIColor(hex: "\(color.color1Hex)")
-        cell.colorLabel2.text = "#" + color.color2Hex
-        cell.colorLabel2.backgroundColor = UIColor(hex: "\(color.color2Hex)")
-        cell.colorLabel3.text = "#" + color.color3Hex
-        cell.colorLabel3.backgroundColor = UIColor(hex: "\(color.color3Hex)")
-        cell.colorLabel4.text = "#" + color.color4Hex
-        cell.colorLabel4.backgroundColor = UIColor(hex: "\(color.color4Hex)")
-        cell.colorLabel5.text = "#" + color.color5Hex
-        cell.colorLabel5.backgroundColor = UIColor(hex: "\(color.color5Hex)")
 
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0 // Replace with your desired height
     }
 
     /*
@@ -90,14 +100,13 @@ class CollectionsTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
     }
     */
 
@@ -111,7 +120,6 @@ class CollectionsTableViewController: UITableViewController {
 
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.

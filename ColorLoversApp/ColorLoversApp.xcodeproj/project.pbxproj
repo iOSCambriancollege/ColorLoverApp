@@ -22,6 +22,7 @@
 		E171D5EB2B29A1A3008AAE25 /* UIColorExtensionHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5EA2B29A1A3008AAE25 /* UIColorExtensionHex.swift */; };
 		E171D5ED2B29B242008AAE25 /* CollectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5EC2B29B242008AAE25 /* CollectionsTableViewController.swift */; };
 		E171D5EF2B29B261008AAE25 /* CollectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5EE2B29B261008AAE25 /* CollectionsTableViewCell.swift */; };
+		E171D5F12B2A37A2008AAE25 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5F02B2A37A2008AAE25 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		E171D5EA2B29A1A3008AAE25 /* UIColorExtensionHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensionHex.swift; sourceTree = "<group>"; };
 		E171D5EC2B29B242008AAE25 /* CollectionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsTableViewController.swift; sourceTree = "<group>"; };
 		E171D5EE2B29B261008AAE25 /* CollectionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsTableViewCell.swift; sourceTree = "<group>"; };
+		E171D5F02B2A37A2008AAE25 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		E171D5B12B297172008AAE25 /* ColorLoversApp */ = {
 			isa = PBXGroup;
 			children = (
+				E171D5F02B2A37A2008AAE25 /* Color.swift */,
 				E171D5EC2B29B242008AAE25 /* CollectionsTableViewController.swift */,
 				E171D5E72B299658008AAE25 /* MagicGenViewController.swift */,
 				E171D5EA2B29A1A3008AAE25 /* UIColorExtensionHex.swift */,
@@ -279,6 +282,7 @@
 				E171D5EB2B29A1A3008AAE25 /* UIColorExtensionHex.swift in Sources */,
 				E171D5E62B297D87008AAE25 /* CameraPageViewController.swift in Sources */,
 				E171D5B72B297172008AAE25 /* ViewController.swift in Sources */,
+				E171D5F12B2A37A2008AAE25 /* Color.swift in Sources */,
 				E171D5B32B297172008AAE25 /* AppDelegate.swift in Sources */,
 				E171D5E82B299658008AAE25 /* MagicGenViewController.swift in Sources */,
 				E171D5EF2B29B261008AAE25 /* CollectionsTableViewCell.swift in Sources */,
