@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MagicGenViewController: UIViewController, XMLParserDelegate {
 
@@ -84,9 +85,24 @@ class MagicGenViewController: UIViewController, XMLParserDelegate {
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         // Handle end of an element
         if elementName == "palette" {
-                    palettes.append(currentPalette)
-                    currentPalette = [:]
-                }
+            palettes.append(currentPalette)
+
+            // Save the palette to Core Data
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "Palette", in: context)!
+            let newPalette = NSManagedObject(entity: entity, insertInto: context)
+
+            newPalette.setValue(colors, forKey: "colors")
+            
+            do {
+                try context.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+
+            currentPalette = [:]
+        }
     }
 
     func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {

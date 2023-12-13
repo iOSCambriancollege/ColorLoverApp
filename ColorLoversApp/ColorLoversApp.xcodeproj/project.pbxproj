@@ -20,6 +20,8 @@
 		E171D5E62B297D87008AAE25 /* CameraPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5E52B297D87008AAE25 /* CameraPageViewController.swift */; };
 		E171D5E82B299658008AAE25 /* MagicGenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5E72B299658008AAE25 /* MagicGenViewController.swift */; };
 		E171D5EB2B29A1A3008AAE25 /* UIColorExtensionHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5EA2B29A1A3008AAE25 /* UIColorExtensionHex.swift */; };
+		E171D5ED2B29B242008AAE25 /* CollectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5EC2B29B242008AAE25 /* CollectionsTableViewController.swift */; };
+		E171D5EF2B29B261008AAE25 /* CollectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5EE2B29B261008AAE25 /* CollectionsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		E171D5E52B297D87008AAE25 /* CameraPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPageViewController.swift; sourceTree = "<group>"; };
 		E171D5E72B299658008AAE25 /* MagicGenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicGenViewController.swift; sourceTree = "<group>"; };
 		E171D5EA2B29A1A3008AAE25 /* UIColorExtensionHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensionHex.swift; sourceTree = "<group>"; };
+		E171D5EC2B29B242008AAE25 /* CollectionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsTableViewController.swift; sourceTree = "<group>"; };
+		E171D5EE2B29B261008AAE25 /* CollectionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,12 +111,14 @@
 		E171D5B12B297172008AAE25 /* ColorLoversApp */ = {
 			isa = PBXGroup;
 			children = (
+				E171D5EC2B29B242008AAE25 /* CollectionsTableViewController.swift */,
 				E171D5E72B299658008AAE25 /* MagicGenViewController.swift */,
 				E171D5EA2B29A1A3008AAE25 /* UIColorExtensionHex.swift */,
 				E171D5B22B297172008AAE25 /* AppDelegate.swift */,
 				E171D5B42B297172008AAE25 /* SceneDelegate.swift */,
 				E171D5B62B297172008AAE25 /* ViewController.swift */,
 				E171D5B82B297172008AAE25 /* Main.storyboard */,
+				E171D5EE2B29B261008AAE25 /* CollectionsTableViewCell.swift */,
 				E171D5E52B297D87008AAE25 /* CameraPageViewController.swift */,
 				E171D5BE2B297174008AAE25 /* Assets.xcassets */,
 				E171D5C02B297174008AAE25 /* LaunchScreen.storyboard */,
@@ -275,6 +281,8 @@
 				E171D5B72B297172008AAE25 /* ViewController.swift in Sources */,
 				E171D5B32B297172008AAE25 /* AppDelegate.swift in Sources */,
 				E171D5E82B299658008AAE25 /* MagicGenViewController.swift in Sources */,
+				E171D5EF2B29B261008AAE25 /* CollectionsTableViewCell.swift in Sources */,
+				E171D5ED2B29B242008AAE25 /* CollectionsTableViewController.swift in Sources */,
 				E171D5BD2B297172008AAE25 /* ColorLoversApp.xcdatamodeld in Sources */,
 				E171D5B52B297172008AAE25 /* SceneDelegate.swift in Sources */,
 			);
