@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -89,15 +90,67 @@
             </objects>
             <point key="canvasLocation" x="-785" y="1182"/>
         </scene>
-        <!--View Controller-->
+        <!--Camera Page View Controller-->
         <scene sceneID="xKe-0r-KJs">
             <objects>
-                <viewController id="hPt-Db-Mub" sceneMemberID="viewController">
+                <viewController id="hPt-Db-Mub" customClass="CameraPageViewController" customModule="ColorLoversApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zi2-lI-BJd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Lovers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYO-vq-eN0">
+                                <rect key="frame" x="20" y="84" width="353" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBx-oV-6om">
+                                <rect key="frame" x="60" y="149" width="273" height="240"/>
+                                <color key="backgroundColor" red="0.92003881931304932" green="0.61314624547958374" blue="0.59033340215682983" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Szh-it-9wQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="Tap to Open Camera">
+                                    <imageReference key="image" image="camera" catalog="system" symbolScale="large"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="openCameraButtonTapped:" destination="hPt-Db-Mub" eventType="touchUpInside" id="4zg-lb-P24"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cB3-CH-jKA">
+                                <rect key="frame" x="60" y="429" width="273" height="240"/>
+                                <color key="backgroundColor" red="0.92003881931304932" green="0.61314624547958374" blue="0.59033340215682983" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="hr6-tx-Rwo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="Tap to Select image">
+                                    <imageReference key="image" image="photo.badge.plus" catalog="system" symbolScale="large"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="28"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="selectImageButtonTapped:" destination="hPt-Db-Mub" eventType="touchUpInside" id="A1W-wS-6nE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="HEE-gU-z4U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dYO-vq-eN0" firstAttribute="leading" secondItem="HEE-gU-z4U" secondAttribute="leading" constant="20" id="7Kf-vW-SsI"/>
+                            <constraint firstItem="dYO-vq-eN0" firstAttribute="top" secondItem="HEE-gU-z4U" secondAttribute="top" constant="25" id="966-fi-qaj"/>
+                            <constraint firstItem="cB3-CH-jKA" firstAttribute="top" secondItem="iBx-oV-6om" secondAttribute="bottom" constant="40" id="VH3-Up-gwk"/>
+                            <constraint firstItem="HEE-gU-z4U" firstAttribute="bottom" secondItem="cB3-CH-jKA" secondAttribute="bottom" constant="100" id="hMO-16-mGM"/>
+                            <constraint firstItem="iBx-oV-6om" firstAttribute="leading" secondItem="HEE-gU-z4U" secondAttribute="leading" constant="60" id="lfb-ta-GgU"/>
+                            <constraint firstItem="HEE-gU-z4U" firstAttribute="trailing" secondItem="iBx-oV-6om" secondAttribute="trailing" constant="60" id="qxm-LD-386"/>
+                            <constraint firstItem="cB3-CH-jKA" firstAttribute="centerX" secondItem="zi2-lI-BJd" secondAttribute="centerX" id="saa-Oo-fqh"/>
+                            <constraint firstItem="HEE-gU-z4U" firstAttribute="trailing" secondItem="dYO-vq-eN0" secondAttribute="trailing" constant="20" id="wAh-eg-Z7h"/>
+                            <constraint firstItem="HEE-gU-z4U" firstAttribute="trailing" secondItem="cB3-CH-jKA" secondAttribute="trailing" constant="60" id="wOs-fL-uqg"/>
+                            <constraint firstItem="iBx-oV-6om" firstAttribute="centerX" secondItem="zi2-lI-BJd" secondAttribute="centerX" id="yHn-Rd-e9I"/>
+                            <constraint firstItem="cB3-CH-jKA" firstAttribute="leading" secondItem="HEE-gU-z4U" secondAttribute="leading" constant="60" id="yJz-y3-Knc"/>
+                            <constraint firstItem="iBx-oV-6om" firstAttribute="top" secondItem="dYO-vq-eN0" secondAttribute="bottom" constant="25" id="zVO-bY-N3t"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="photo" catalog="system" id="pxj-yb-lJ2"/>
                 </viewController>
@@ -107,9 +160,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="paintpalette" catalog="system" width="128" height="105"/>
         <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="photo.badge.plus" catalog="system" width="128" height="97"/>
         <image name="wand.and.stars" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

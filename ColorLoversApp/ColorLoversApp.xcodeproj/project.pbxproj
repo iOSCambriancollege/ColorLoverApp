@@ -17,6 +17,7 @@
 		E171D5CD2B297174008AAE25 /* ColorLoversAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5CC2B297174008AAE25 /* ColorLoversAppTests.swift */; };
 		E171D5D72B297174008AAE25 /* ColorLoversAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5D62B297174008AAE25 /* ColorLoversAppUITests.swift */; };
 		E171D5D92B297174008AAE25 /* ColorLoversAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5D82B297174008AAE25 /* ColorLoversAppUITestsLaunchTests.swift */; };
+		E171D5E62B297D87008AAE25 /* CameraPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5E52B297D87008AAE25 /* CameraPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E171D5D22B297174008AAE25 /* ColorLoversAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorLoversAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E171D5D62B297174008AAE25 /* ColorLoversAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLoversAppUITests.swift; sourceTree = "<group>"; };
 		E171D5D82B297174008AAE25 /* ColorLoversAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLoversAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E171D5E52B297D87008AAE25 /* CameraPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				E171D5B42B297172008AAE25 /* SceneDelegate.swift */,
 				E171D5B62B297172008AAE25 /* ViewController.swift */,
 				E171D5B82B297172008AAE25 /* Main.storyboard */,
+				E171D5E52B297D87008AAE25 /* CameraPageViewController.swift */,
 				E171D5BE2B297174008AAE25 /* Assets.xcassets */,
 				E171D5C02B297174008AAE25 /* LaunchScreen.storyboard */,
 				E171D5C32B297174008AAE25 /* Info.plist */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E171D5E62B297D87008AAE25 /* CameraPageViewController.swift in Sources */,
 				E171D5B72B297172008AAE25 /* ViewController.swift in Sources */,
 				E171D5B32B297172008AAE25 /* AppDelegate.swift in Sources */,
 				E171D5BD2B297172008AAE25 /* ColorLoversApp.xcdatamodeld in Sources */,
