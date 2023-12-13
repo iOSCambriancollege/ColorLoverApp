@@ -10,11 +10,21 @@ import CoreData
 
 class MagicGenViewController: UIViewController, XMLParserDelegate {
 
+    struct Color {
+        var count: Int
+        var color1Hex: String
+        var color2Hex: String
+        var color3Hex: String
+        var color4Hex: String
+        var color5Hex: String
+    }
+
     var currentElement = ""
     var currentPalette: [String: String] = [:]
     var palettes: [[String: String]] = []
     var colors: [String] = []
     var counter = 0;
+    var PaletteHistory: [Color] = []
 
     @IBOutlet weak var paletteColor1: UILabel!
     @IBOutlet weak var paletteColor2: UILabel!
@@ -55,6 +65,7 @@ class MagicGenViewController: UIViewController, XMLParserDelegate {
 
     func updateUIWithNewColors() {
         // Update your UI with the new colors here
+        var newColor = Color(count: self.counter, color1Hex: self.colors[self.counter*11], color2Hex: self.colors[(self.counter*11)+2], color3Hex: self.colors[(self.counter*11)+4], color4Hex: self.colors[(self.counter*11)+6], color5Hex: self.colors[(self.counter*11)+8])
         self.paletteColor1.text = "#" + self.colors[self.counter*11]
         self.paletteColor1.backgroundColor = UIColor(hex: "\(self.colors[self.counter*11])")
         self.paletteColor2.text = "#" + self.colors[(self.counter*11)+2]
@@ -66,6 +77,7 @@ class MagicGenViewController: UIViewController, XMLParserDelegate {
         self.paletteColor5.text = "#" + self.colors[(self.counter*11)+8]
         self.paletteColor5.backgroundColor = UIColor(hex: "\(self.colors[(self.counter*11)+8])")
         self.counter += 1
+        PaletteHistory.append(newColor)
     }
 
     // XMLParserDelegate methods
@@ -93,8 +105,8 @@ class MagicGenViewController: UIViewController, XMLParserDelegate {
             let entity = NSEntityDescription.entity(forEntityName: "Palette", in: context)!
             let newPalette = NSManagedObject(entity: entity, insertInto: context)
 
-            newPalette.setValue(colors, forKey: "colors")
-            
+            newPalette.setValue(PaletteHistory, forKey: "palettes")
+
             do {
                 try context.save()
             } catch let error as NSError {
