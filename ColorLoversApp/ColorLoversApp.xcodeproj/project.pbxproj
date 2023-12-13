@@ -18,6 +18,8 @@
 		E171D5D72B297174008AAE25 /* ColorLoversAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5D62B297174008AAE25 /* ColorLoversAppUITests.swift */; };
 		E171D5D92B297174008AAE25 /* ColorLoversAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5D82B297174008AAE25 /* ColorLoversAppUITestsLaunchTests.swift */; };
 		E171D5E62B297D87008AAE25 /* CameraPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5E52B297D87008AAE25 /* CameraPageViewController.swift */; };
+		E171D5E82B299658008AAE25 /* MagicGenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5E72B299658008AAE25 /* MagicGenViewController.swift */; };
+		E171D5EB2B29A1A3008AAE25 /* UIColorExtensionHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E171D5EA2B29A1A3008AAE25 /* UIColorExtensionHex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		E171D5D62B297174008AAE25 /* ColorLoversAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLoversAppUITests.swift; sourceTree = "<group>"; };
 		E171D5D82B297174008AAE25 /* ColorLoversAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorLoversAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E171D5E52B297D87008AAE25 /* CameraPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPageViewController.swift; sourceTree = "<group>"; };
+		E171D5E72B299658008AAE25 /* MagicGenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicGenViewController.swift; sourceTree = "<group>"; };
+		E171D5EA2B29A1A3008AAE25 /* UIColorExtensionHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensionHex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 		E171D5B12B297172008AAE25 /* ColorLoversApp */ = {
 			isa = PBXGroup;
 			children = (
+				E171D5E72B299658008AAE25 /* MagicGenViewController.swift */,
+				E171D5EA2B29A1A3008AAE25 /* UIColorExtensionHex.swift */,
 				E171D5B22B297172008AAE25 /* AppDelegate.swift */,
 				E171D5B42B297172008AAE25 /* SceneDelegate.swift */,
 				E171D5B62B297172008AAE25 /* ViewController.swift */,
@@ -264,9 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E171D5EB2B29A1A3008AAE25 /* UIColorExtensionHex.swift in Sources */,
 				E171D5E62B297D87008AAE25 /* CameraPageViewController.swift in Sources */,
 				E171D5B72B297172008AAE25 /* ViewController.swift in Sources */,
 				E171D5B32B297172008AAE25 /* AppDelegate.swift in Sources */,
+				E171D5E82B299658008AAE25 /* MagicGenViewController.swift in Sources */,
 				E171D5BD2B297172008AAE25 /* ColorLoversApp.xcdatamodeld in Sources */,
 				E171D5B52B297172008AAE25 /* SceneDelegate.swift in Sources */,
 			);

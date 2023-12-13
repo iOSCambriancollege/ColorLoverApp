@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="-779" y="415"/>
         </scene>
-        <!--View Controller-->
+        <!--Magic Gen View Controller-->
         <scene sceneID="DfD-CL-ZEY">
             <objects>
-                <viewController id="gsl-vW-mdn" sceneMemberID="viewController">
+                <viewController id="gsl-vW-mdn" customClass="MagicGenViewController" customModule="ColorLoversApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n6i-pB-lmz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +139,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Magic Generator" id="8kh-SL-igD">
-                                        <barButtonItem key="rightBarButtonItem" image="arrow.clockwise" catalog="system" id="B1P-UE-IHM"/>
+                                        <barButtonItem key="rightBarButtonItem" image="arrow.clockwise" catalog="system" id="B1P-UE-IHM">
+                                            <connections>
+                                                <action selector="refreshButtonTapped:" destination="gsl-vW-mdn" id="gep-RF-y6l"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -218,6 +222,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="wand.and.stars" catalog="system" id="1WV-sj-gIw"/>
+                    <connections>
+                        <outlet property="paletteColor1" destination="Apy-QX-Jvt" id="gsZ-pX-Kvb"/>
+                        <outlet property="paletteColor2" destination="qd1-jz-bR8" id="RAr-tr-rlP"/>
+                        <outlet property="paletteColor3" destination="2Mr-ZL-Zuq" id="ZYz-D8-L3V"/>
+                        <outlet property="paletteColor4" destination="yd1-yn-tfi" id="AGA-0G-byx"/>
+                        <outlet property="paletteColor5" destination="x3q-uj-bD5" id="aEw-wd-805"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Exh-6F-7wz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
