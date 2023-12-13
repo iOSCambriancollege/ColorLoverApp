@@ -2,7 +2,6 @@
 //  CameraPageViewController.swift
 //  ColorLoversApp
 //
-//  Created by Shaik Mathar Syed on 13/12/23.
 //
 
 import UIKit

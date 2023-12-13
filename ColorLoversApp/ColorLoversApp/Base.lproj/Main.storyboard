@@ -312,8 +312,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMU-Y1-ruN">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMU-Y1-ruN">
                                 <rect key="frame" x="287" y="137" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="globe" catalog="system"/>
                             </button>
@@ -382,7 +383,6 @@
                             <constraint firstItem="ub5-Vz-ree" firstAttribute="top" secondItem="PBA-pl-KwV" secondAttribute="bottom" constant="50" id="Xbd-MP-8Ls"/>
                             <constraint firstItem="eHp-NI-PBR" firstAttribute="leading" secondItem="ru5-he-bvs" secondAttribute="leading" constant="40" id="Y25-Ue-JX3"/>
                             <constraint firstItem="sz8-ou-JV4" firstAttribute="leading" secondItem="ru5-he-bvs" secondAttribute="leading" constant="40" id="bAi-66-lQY"/>
-                            <constraint firstItem="ru5-he-bvs" firstAttribute="trailing" secondItem="PMU-Y1-ruN" secondAttribute="trailing" constant="40" id="jI7-jX-19u"/>
                             <constraint firstItem="P3w-yB-c1g" firstAttribute="leading" secondItem="ru5-he-bvs" secondAttribute="leading" constant="40" id="kQf-uf-qJt"/>
                             <constraint firstItem="b0z-NM-U2B" firstAttribute="leading" secondItem="ru5-he-bvs" secondAttribute="leading" constant="40" id="nmq-gi-uHh"/>
                             <constraint firstItem="Ymp-Uj-F3D" firstAttribute="leading" secondItem="ru5-he-bvs" secondAttribute="leading" constant="40" id="pKh-FD-5JH"/>

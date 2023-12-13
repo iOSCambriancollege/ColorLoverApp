@@ -2,7 +2,6 @@
 //  ViewController.swift
 //  ColorLoversApp
 //
-//  Created by Shaik Mathar Syed on 12/12/23.
 //
 
 import UIKit
